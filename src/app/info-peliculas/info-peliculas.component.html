@@ -1,0 +1,44 @@
+@if (showBox) {
+<div class="overlay">
+    <div class="content">
+        <h1> Información sobre la película </h1>
+        <div class="container">
+        <table class="table table-dark">
+            <thead class="table-danger">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Pais</th>
+                    <th scope="col">Lenguaje original</th>
+                    <th scope="col">Fecha de salida</th>
+                    <th scope="col">Duración (min)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="row">{{peliInfo.title}}</th>
+                    <th class="row">{{peliInfo.origin_country[0]}}</th>
+                    <th class="row">{{peliInfo.original_language}}</th>
+                    <th class="row">{{peliInfo.release_date}}</th>
+                    <th class="row">{{peliInfo.runtime}}</th>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <h3>Descripción</h3>
+        <div class="container">
+            <p>
+            {{peliInfo.overview}} 
+            </p>
+        </div>
+        <div class="container">
+            <button class="buttonGreen" id="openLink" (click)="openBrowser(peliInfo.homepage)">
+                Buscar en el navegador
+            </button>
+            <button class="buttonBlue" id="closeTab" (click)="closeTab()">
+                Cerrar
+            </button>
+        </div>
+        
+    </div>
+</div>
+}

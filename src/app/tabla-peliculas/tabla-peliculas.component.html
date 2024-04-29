@@ -1,0 +1,44 @@
+<div style="padding: 0px;">
+    <label id="nombreLabel" style="margin-right: 15px;">
+        Búsqueda:
+    </label>
+    <input type="text" id="textInput" style="margin-right: 15px;" 
+           (keyup.enter)="searchPelis()" (input)="disableOrEnableButton()">
+    <button class="buttonGreen" id="sendingButton" type="submit" 
+        [disabled]="!textInputValue" (click)="searchPelis()">
+        Buscar
+    </button>
+
+    <h1 class="text-center"> Películas </h1>
+    <h2> Buscando por:  "{{TerminoBusqueda.toLowerCase()}}"</h2>
+
+    <table class="table table-dark">
+        <thead class="table-danger">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(pelicula of peliculasList; track pelicula.id){
+                <tr>
+                    <th (click)="showInfoPeli(pelicula.id)" 
+                        class="row">{{pelicula.id}}                  
+                    </th>
+                    <th (click)="showInfoPeli(pelicula.id)" 
+                        class="row"> 
+                        @if(pelicula.title){
+                            {{pelicula.title}}
+                        }@else if(pelicula.name){
+                            {{pelicula.name}}
+                        }
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<!-- COMPONENTE HIJO QUE MUESTRA INFORMACIÓN SOBRE LAS PELÍCULAS-->>
+<info_peliculas/>

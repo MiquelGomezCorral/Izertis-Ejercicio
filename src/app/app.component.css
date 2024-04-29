@@ -1,0 +1,109 @@
+::ng-deep :root {
+    --verde: #b7f680;
+    --verde-oscuro1: #8bcb52; 
+    --verde-oscuro2: #629f2d; 
+    --rojo: #fa4747;
+    --rojo-oscuro: #d63d3dd8; 
+    --azul-claro: #86c3eb;
+    --azul: #42a2e1;
+    --azul-oscuro: #2181c1;
+    --blanco: #ffffff;
+    --negro: #1d1f27; 
+    --negro-oscuro: #16171d; 
+}  
+/*=================================*/
+/*          ESTILOS                */
+/*=================================*/
+::ng-deep h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(171, 241, 109);
+}
+::ng-deep h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--verde-oscuro1);
+}
+::ng-deep h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--azul-claro);
+    font-size: 22px;
+}
+
+section{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 32px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 32px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=================================*/
+/*          BOTONES                */
+/*=================================*/
+::ng-deep button:disabled {
+    background-color: var(--negro); 
+    cursor: not-allowed;
+}
+
+::ng-deep .buttonGreen{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--blanco);
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: var(--verde-oscuro1); 
+}
+::ng-deep .buttonGreen:hover:not(:disabled) {
+    background-color: var(--verde-oscuro2); 
+}
+
+::ng-deep .buttonBlue{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--blanco);
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: var(--azul); 
+}
+
+::ng-deep .buttonBlue:hover:not(:disabled) {
+    background-color: var(--azul-oscuro); 
+}
+
+/*=================================*/
+/*          ESTILOS                */
+/*=================================*/
+
+::ng-deep input, textarea {
+    width: 17vw;
+    font-size: 16px;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border: 2px solid var(--blanco);
+    border-radius: 5px;
+    color: var(--blanco);;
+    background-color: var(--negro)
+  }
